@@ -1,0 +1,62 @@
+body {
+	background-color: black;
+	color: #6DF7FF;
+	font-family: 'Droid Sans Mono', sans-serif;
+	font-size: 16px;
+}
+
+#content {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#input-box {
+	height: 20%;	
+	text-align: center;
+}
+
+#messages {
+	padding: 10px;	
+}
+
+.message {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.message-type {
+	font-weight: bold;
+	display: inline-block;
+	width: 125px;
+}
+
+.message-text {
+	display: inline-block;
+}
+
+input[type=text] {
+	background-color: black;
+	color: #6DF7FF;
+	font-family: 'Droid Sans Mono', sans-serif;
+	font-size: 24px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #6DF7FF;
+	width: 80%;
+}
+
+input[type=submit] {
+	background-color: black;
+	color: #6DF7FF;
+	font-family: 'Droid Sans Mono', sans-serif;
+	font-size: 24px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #6DF7FF;
+	width: 100px;
+}
+
+input[type=submit]:hover {
+	font-weight: bold;
+}
