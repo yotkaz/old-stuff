@@ -1,0 +1,23 @@
+
+TORrent_client available commands:
+----------------------------------
+
+help - print help page
+exit - exit client
+get_users_list - get server users list
+get_files_list - get other users files list
+show_my_files - show files in home directory
+refresh_my_files - refresh list of my files
+show_users_list - show users list
+show_files_list - show list of files shared by other users
+show_downloads - show list of files downloaded now
+show_download_log - show log of download
+hide_download_log - hide log of download
+save_downloads - save state of downloaded files
+pull - pull file from other users
+push - push my file to another user
+pull_stop - stop pulling
+pull_resume - resume pulling
+pull_abort - abort pulling
+pull_stop_all - stop all pulling
+---------------------------------- 

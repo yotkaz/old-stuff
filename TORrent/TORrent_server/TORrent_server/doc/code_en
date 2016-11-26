@@ -1,0 +1,9 @@
+### CLIENT TO SERVER:
+0000 - get users list
+0100 - add user (client serverSocket port in next line)
+0200 - remove user (client serverSocket port in next line) // unused
+0300 - ping (client serverSocket port in next line)
+
+### CLIENT TO CLIENT
+1000 - get files list from user (md5, name, size)
+2000 - get block (start byte number in second line) (number of bytes = size of block in third line)
