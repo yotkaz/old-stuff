@@ -1,0 +1,83 @@
+/*  ASD.4 PL:
+
+### ZADANIE
+Rozważmy macierz kwadratową M rozmiaru n, której elementy są liczbami całkowitymi. 
+Dalej R={m(0),m(1),…,m(k-1)} jest zbiorem k różnych podmacierzy macierzy M (przez podmacierz 
+rozumiemy spójny fragment macierzy właściwej o zadanych indeksach elementów krańcowych).
+
+Wyznacz liczbę klas abstrakcji zbioru R ustalonych względem relacji binarnej r takiej, że m(i) r m(j) 
+wtedy i tylko wtedy, gdy suma elementów podmacierzy m(i) jest równa sumie elementów podmacierzy m(j), 
+dla 0<=i,j<k. Dodatkowo ustal liczbę klas abstrakcji o maksymalnym rozmiarze oraz średnią wartość sum 
+elementów podmacierzy stanowiących zbiór R zredukowaną do jej części całkowitoliczbowej.
+
+
+### WEJŚCIE
+Wiersz zawierający liczby n oraz k oddzielone znakiem odstępu (kod ASCII 32) i zakończony 
+znakiem nowej linii (kod ASCII 10). Następnie n wierszy reprezentujących kolejne wiersze macierzy M, 
+w których elementy rozdzielone są znakiem odstępu, a każdy wiersz zakończony jest znakiem nowej linii. 
+Dalej k wierszy, z których każdy reprezentuje podmacierz m(i), dla i=0,1,…,k-1, postaci:
+ - liczba określająca indeks wiersza lewego górnego „rogu” podmacierzy m(i), znak odstępu,
+ - liczba określająca indeks kolumny lewego górnego „rogu” podmacierzy m(i), znak odstępu,
+ - liczba określająca indeks wiersza prawego dolnego „rogu” podmacierzy m(i), znak odstępu,
+ - liczba określająca indeks kolumny prawego dolnego „rogu” podmacierzy m(i), znak nowej linii.
+
+Zakładamy indeksowanie wierszowe i kolumnowe elementów macierzy M od 0 do n-1 włącznie.
+
+
+### WYJŚCIE
+Wiersz zawierający trzy liczby całkowite oddzielone znakiem odstępu (liczba klas abstrakcji, 
+liczba klas abstrakcji o maksymalnym rozmiarze, średnia wartość sum elementów podmacierzy 
+należących do zbioru R) stanowiące rozwiązanie problemu.
+
+ 
+### OGRANICZENIA
+Liczby n i k ograniczone kolejno od dołu przez 1, od góry odpowiednio przez 10^4 oraz 10^8. 
+Elementy macierzy M ograniczone przedziałem [-10^3,10^3].
+
+
+### LIMITY
+Oczekiwana złożoność czasowa rzędu O(n^2+klgk). Oczekiwana złożoność pamięciowa rzędu O(n^2+k).
+
+
+### PRZYKŁAD 1
+
+-- wejście:
+4 8
+-2 -2 -3 1
+3 0 1 3
+1 3 -3 3
+2 0 0 -2
+0 0 2 1
+2 2 2 3
+1 2 1 3
+3 2 3 3
+3 0 3 3
+0 1 2 1
+3 3 3 3
+1 3 1 3
+
+-- wyjście:
+5 3 0
+
+
+### KOMENTARZ DO ROZWIĄZANIA
+Oznaczmy przez SM0, SM1, …, SM7 sumy elementów kolejnych podmacierzy podanych na wejściu, wtedy:
+
+SM0=(-2)+(-2)+3+0+1+3=3
+SM1=(-3)+3=0
+SM2=1+3=4
+SM3=0+(-2)=(-2)
+SM4=2+0+0+(-2)=0
+SM5=(-2)+0+3=1
+SM6=(-2)
+SM7=3
+
+Stąd liczba klas abstrakcji względem rozważanej relacji jest równa 5 (różne wartości w/w sum to kolejno 
+(-2), 1, 0, 3 oraz 4). Dalej, liczba klas abstrakcji o maksymalnym rozmiarze równa jest 3, są to klasy 
+abstrakcji elementów (-2), 0 oraz 3. Ostatecznie średnia wartość sumy elementów rozważanych podmacierzy 
+zredukowana do części całkowitoliczbowej to:
+
+(3+0+4+(-2)+0+1+(-2)+3)/8=7/8=0
+Zatem odpowiedź stanowi trójka liczb 5, 3 oraz 0.
+
+*/

@@ -1,0 +1,8 @@
+in1.txt:
+asd
+
+in2.txt:
+pjwstk
+
+in3.txt:
+wurzi
